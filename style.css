@@ -5,6 +5,19 @@
   font-family: Lato, sans-serif;
 }
 
+ul {
+  margin:0;
+  padding: 0px;
+}
+
+li, h3 {
+  list-style:none;
+}
+
+input,button{
+  outline:none;
+}
+
 .main {
   display: block;
   width: 500px;
@@ -42,21 +55,10 @@
   display: flex;
 }
 
-ul {
-  margin:0;
-  padding: 0px;
-}
 
-li, h3 {
-  list-style:none;
-}
-
-input,button{
-  outline:none;
-}
-
-button,
-.btn-delete {
+.btn-edit,
+.btn-delete,
+.add-task__button {
   background: none;
   border: 0px;
   color: #888;
@@ -66,12 +68,14 @@ button,
   cursor: pointer;
 }
 
-button:hover {
+.btn-edit:hover,
+.save:hover {
   color: #3a3A3a;
 }
 
 /* Heading */
-h3,lable[for='add-task__new-task'] {
+.to-do,
+.add-task__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -81,7 +85,8 @@ h3,lable[for='add-task__new-task'] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task-text,
+.add-task__new-task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -94,12 +99,12 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task-text:focus {
   color: rgb(51, 51, 51);
 }
 
 /* New Task */
-lable[for="add-task__new-task"] {
+.add-task__label {
   display: block;
   margin: 0 0 20px;
 }
@@ -108,12 +113,12 @@ lable[for="add-task__new-task"] {
   width: 318px;
 }
 
-p > button:hover {
+.add-task__button:hover {
   color: #0FC57C;
 }
 
 /* Task list */
-li {
+.list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -126,23 +131,19 @@ li > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li >  input[type="text"] {
+.task-text {
   width: 226px
-}
-
-.btn-delete:hover {
-  color: #CF2323;
 }
 
 .btn-delete img {
@@ -151,7 +152,7 @@ li >  input[type="text"] {
   transition: transform 200ms ease-in;
 }
 
-.btn-delete img:hover {
+.delete-button-image:hover {
   transform: rotateZ(0);
 }
 
@@ -166,7 +167,7 @@ li >  input[type="text"] {
   display:none
 }
 
-.edit-mode input[type=text] {
+.edit-mode [type=text] {
   display:inline-block;
   width:224px
 }
