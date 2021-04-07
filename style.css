@@ -157,6 +157,10 @@ button {
   transform: rotateZ(0);
 }
 
+.btn-delete:hover {
+  color: #CF2323;
+}
+
 /* Completed */
 .completed-tasks__label {
   text-decoration: line-through;
